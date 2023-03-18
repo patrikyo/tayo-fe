@@ -1,0 +1,47 @@
+.card__container {
+    max-width: 350px;
+    max-height: 350px; 
+    padding: 30px;
+}
+
+.card__container--dark {
+    max-width: 800px;
+    max-height: 800px; 
+    padding: 30px;
+}
+
+.card__image {
+    object-fit: fill;
+
+    max-width: 430px;
+    max-height: 287px;
+}
+
+.fa-users-line {
+transform: scale(3);
+
+}
+
+.card__icon-container {
+    margin: 0 auto;
+}
+
+.card__body {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.card__button--dark{
+    background-color: #192024 ;
+    border: 1px solid #fff ;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0; 
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+.card__button--dark:hover{
+    border: 1px solid #2e9dff;
+    color: #2e9dff;
+}
