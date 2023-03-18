@@ -66,11 +66,14 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route
-          path="/tayo"
+          path="/"
           element={
             <>
               <Header /> <Hero /> <Section section={aboutUsSection} />
               <Section section={sectionService} />
+              <div className="footer_wrapper">
+                <Footer></Footer>
+              </div>
             </>
           }
         />
@@ -86,10 +89,6 @@ root.render(
         />
       </Routes>
     </BrowserRouter>
-    <div className="footer_wrapper">
-      <Footer></Footer>
-    </div>
-    <Section section={sectionService} />
   </React.StrictMode>
 );
 
