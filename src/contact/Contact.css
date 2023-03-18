@@ -1,0 +1,53 @@
+.contact__container {
+    width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact__header {
+    color: #676770;
+    font-size: 30px;
+    letter-spacing: 5px;
+    font-weight: 300;
+}
+
+.contact__body {
+    color: #8e8e9c;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.contact_fieldset {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_fieldset > label {
+    margin: 10px 0;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 300;
+}
+
+.contact__submit {
+    font-weight: 300;
+    margin-top: 20px;
+    background-color: #69b9ff;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+}
+
+.contact__submit:hover {
+    cursor: pointer;
+    background-color: #69C3FF;
+}
+
+.contact__control {
+    padding: 10px; 
+    border: 1px solid black;
+   /*  border: 1px  #69C3FF; */
+}
