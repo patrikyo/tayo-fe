@@ -1,0 +1,40 @@
+.section__container {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.light {
+    background-color:  white;
+}
+
+.dark {
+    background-color: #192024;
+    color: #fff;
+}
+
+.section__header {
+    font-size: 30px;
+    color: #676770
+}
+
+.section__header--dark { 
+    color: #fff;
+
+}
+
+.section__body {
+    color: #8e8e9c;
+    font-size: 18px;
+    width: 50%;
+    margin: 0 auto 60px auto;
+}
+
+.section__list {
+    list-style-type: none;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
