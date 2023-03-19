@@ -9,7 +9,7 @@ function Header() {
         </div>
         <nav className="col-2">
           <ul className="header__navigation-links">
-            <li>{<NavLink to="/tayo">Hem</NavLink>}</li>
+            <li>{<NavLink to="/">Hem</NavLink>}</li>
             <li>{<NavLink to="/contact">Kontakta</NavLink>}</li>
           </ul>
         </nav>
