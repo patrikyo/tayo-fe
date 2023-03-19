@@ -9,7 +9,7 @@ const Contact = function () {
   const sendMessage = (e) => {
     e.preventDefault();
     const contactForm = { name, email, message };
-    fetch("http://localhost:9000/api/contact", {
+    fetch("https://tayo-api-service.onrender.com/api/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
