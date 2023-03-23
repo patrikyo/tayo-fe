@@ -2,6 +2,9 @@
     max-width: 940px;
 }
 
+.header__main-link {
+    text-decoration: none;
+}
 h1 {
     color: #69b9ff;
     padding-top: 10px;
