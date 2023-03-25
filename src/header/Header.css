@@ -1,10 +1,26 @@
 .header__container {
     max-width: 940px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0 auto;
 }
 
 .header__main-link {
     text-decoration: none;
 }
+
+.header_main-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header_icon {
+    color: #69b9ff;
+    transform: scale(1.8); 
+}
+
 h1 {
     color: #69b9ff;
     padding-top: 10px;

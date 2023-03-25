@@ -45,3 +45,18 @@ transform: scale(3);
     border: 1px solid #2e9dff;
     color: #2e9dff;
 }
+
+
+@media screen and (max-width: 500px){
+    .card__container {
+        padding: 0;
+    }
+    
+    .card__container--dark {
+        padding: 0px;
+    }
+
+    .card__image {
+        max-width: 300px;
+    }
+}
