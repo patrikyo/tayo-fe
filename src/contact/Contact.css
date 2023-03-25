@@ -51,3 +51,26 @@
     border: 1px solid black;
    /*  border: 1px  #69C3FF; */
 }
+
+.contact__spinner-container {
+    width: 85px;
+    margin: 20px auto 0;
+}
+.spinner-border {
+    height: 50px;
+    width: 50px;
+    color: #69b9ff !important;
+}
+
+.contact__verification {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact__check-icon {
+    height: 50px;
+    width: 50px;
+    color: green;
+}
