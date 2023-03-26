@@ -38,3 +38,10 @@
     justify-content: space-around;
 
 }
+
+
+@media screen and (max-width: 540px){
+    .section__body {
+    width: 100%;
+    }
+}

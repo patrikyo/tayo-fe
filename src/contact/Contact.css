@@ -1,5 +1,5 @@
 .contact__container {
-    width: 1300px;
+    width: 940px;
     margin: 0 auto;
     text-align: center;
 }
@@ -17,6 +17,7 @@
     font-weight: 300;
     text-align: center;
     letter-spacing: 3px;
+    margin-bottom: 0;
 }
 
 .contact_fieldset {
@@ -73,4 +74,11 @@
     height: 50px;
     width: 50px;
     color: green;
+}
+
+@media screen and (max-width: 540px){
+    .contact__container {
+        width: 100%;
+        padding: 0 15px;
+    }
 }

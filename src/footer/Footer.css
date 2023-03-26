@@ -53,3 +53,17 @@
     font-weight: 400;
     border-bottom: 1px solid #d5d5e0;
 }
+
+
+@media screen and (max-width: 540px) {
+    .footer__container {
+        flex-direction: column; 
+        gap: 30px;
+        padding: 35px 15px;
+    }
+
+    .footer__socialmedia {
+        text-align: center;
+    }
+
+}
