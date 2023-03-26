@@ -79,6 +79,6 @@
 @media screen and (max-width: 540px){
     .contact__container {
         width: 100%;
-        padding: 0 15px;
+        padding: 10px 15px;
     }
 }

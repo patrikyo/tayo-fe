@@ -17,12 +17,12 @@
 }
 
 .header__icon {
-    color: #69b9ff;
-    transform: scale(1.8); 
+    color: #676776 ;
+    transform: scale(1.5); 
 }
 
 .header h1 {
-    color: #69b9ff;
+    color: #676776 ;
     padding-top: 10px;
 }
 
@@ -30,6 +30,10 @@
     width: 35px;
     height: 35px;
     color: #192024;
+}
+
+.header__navigation-container {
+    min-width: 25%;
 }
 
 .header__navigation-links {
@@ -69,7 +73,7 @@
     }
 
     .header__navigation-links--hide {
-        visibility: hidden;
+        display: none;
     }
 
     .header__navigation-btn {

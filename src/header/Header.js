@@ -9,7 +9,7 @@ function Header() {
   const [navigation, setNavigation] = useState(false);
 
   return (
-    <div className="header pt-3">
+    <div className={`header pt-3 ${navigation === true ? "pb-0" : "pb-5"}`}>
       {/** title */}
       <Link id="header__home-link" to="/">
         <div className="header__title-container">
@@ -19,7 +19,7 @@ function Header() {
       </Link>
 
       {/** navigation links */}
-      <div>
+      <div className="header__navigation-container">
         {/** Btn only visible up to 540px */}
         <button
           className="header__navigation-btn"
