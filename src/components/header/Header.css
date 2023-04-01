@@ -84,6 +84,11 @@
     .header {
         padding: 20px 10px;
     }
+
+    .header__navigation-container  nav {
+        height: 50% ;
+    }
+    
     .header--no-navigation {
         padding-bottom: 50px;
     }
