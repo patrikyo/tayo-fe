@@ -6,7 +6,9 @@ const Card = (props) => {
   return (
     <div
       className={`${
-        props.theme === "light" ? "card__container" : "card__container--dark"
+        props.theme === "light"
+          ? "card__container--light"
+          : "card__container--dark"
       }`}
     >
       {props.icon.length > 0 && (

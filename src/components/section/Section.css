@@ -3,23 +3,22 @@
     padding: 80px 0;
 }
 
-.light {
+.section__container--light {
     background-color:  white;
 }
 
-.dark {
+.section__container--dark {
     background-color: #192024;
     color: #fff;
 }
 
-.section__header {
+.section__header--light {
     font-size: 30px;
     color: #676770
 }
 
 .section__header--dark { 
     color: #fff;
-
 }
 
 .section__body {
@@ -41,7 +40,20 @@
 
 
 @media screen and (max-width: 540px){
+    .section__container {
+        padding: 0;
+    }
+
+    .section__container--light {
+        padding-top: 30px;
+    }
+
+    .section__container--dark {
+        padding-top: 30px;
+    }
+
     .section__body {
     width: 100%;
     }
+
 }
