@@ -23,7 +23,7 @@ const Card = (props) => {
         {props.showButton && (
           <a
             href="www.google.se"
-            className={`${
+            className={`card__button ${
               props.theme === "light" ? "btn btn-primary" : "card__button--dark"
             }  `}
           >

@@ -9,7 +9,11 @@ function Header() {
   const [navigation, setNavigation] = useState(false);
 
   return (
-    <div className={`header pt-3 ${navigation === true ? "pb-0" : "pb-5"}`}>
+    <div
+      className={`header  ${
+        navigation === true ? "header--navigation" : "header--no-navigation"
+      }`}
+    >
       {/** title */}
       <Link id="header__home-link" to="/">
         <div className="header__title-container">

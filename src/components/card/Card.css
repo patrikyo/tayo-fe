@@ -1,7 +1,7 @@
 .card__container {
-    max-width: 350px;
+    max-width: 390px;
     max-height: 350px; 
-    padding: 30px;
+    padding: 15px;
 }
 
 .card__container--dark {
@@ -29,6 +29,10 @@ transform: scale(3);
 .card__body {
     margin-top: 30px;
     text-align: center;
+}
+
+.card__button {
+    width: 100%;
 }
 
 .card__button--dark{
