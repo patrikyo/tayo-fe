@@ -6,15 +6,10 @@ const Footer = function () {
         <div className="footer__aboutUs">
           <h2 className="footer__header">Om oss</h2>
           <div className="footer__body">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            Välkommen till vårt hisskonsultföretag, där vi erbjuder personliga
+            och skräddarsydda tjänster för att hjälpa dig att fatta välgrundade
+            beslut om dina vertikala transportbehov. Som ett enmansbolag kan vi
+            ge dig den individuella uppmärksamhet och expertis du förtjänar.
           </div>
         </div>
         <div className="footer__socialmedia">

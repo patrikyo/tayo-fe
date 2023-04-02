@@ -12,7 +12,7 @@ import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
 
 function App() {
-  const aboutUsSection = new SectionClass(
+  const services = new SectionClass(
     "Våra tjänster",
     2,
     "Med stor kunskap inom rulltrappor och hissar är vi heltäckande men i ett litet företag som kan ge personlig service. Det är viktigt för oss att vi har en nära kontakt med våra kunder.",
@@ -21,14 +21,14 @@ function App() {
       new cardClass(
         "",
         "Service",
-        "Vi tillhandahåller 24/7 akutreparationstjänster, så du kan lita på oss när du behöver det som mest. Vårt team är alltid redo att svara på alla hiss- eller rulltrappsnödsituationer och säkerställa att din byggnad är säker och tillgänglig vid alla tider.",
+        "Vi tillhandahåller 24/7 akutreparationstjänster, så du kan lita på oss när du behöver det som mest. Vi är alltid redo att svara på alla hiss- eller rulltrappsnödsituationer och säkerställa att din byggnad är säker och tillgänglig vid alla tider.",
         true,
         "faUsersLine"
       ),
       new cardClass(
         "",
         "Felsökning & reperation",
-        "Vårt team av erfarna och certifierade tekniker har expertisen att diagnostisera och reparera alla typer av hiss- och rulltrappsystem, från hydrauliska till drag- och maskinrumslösa system.",
+        "Med en erfaren och certifierade tekniker har vi expertisen att diagnostisera och reparera alla typer av hiss- och rulltrappsystem, från hydrauliska till drag- och maskinrumslösa system.",
         true,
         "faUsersLine"
       ),
@@ -65,7 +65,7 @@ function App() {
           path="/"
           element={
             <>
-              <Header /> <Hero /> <Section section={aboutUsSection} />
+              <Header /> <Hero /> <Section section={services} />
               <Section section={sectionService} />
               <div className="footer_wrapper">
                 <Footer />
@@ -79,7 +79,7 @@ function App() {
           path="/contact"
           element={
             <>
-              <Header /> <Contact />
+              <Header /> <Contact /> <Footer />
             </>
           }
         />
