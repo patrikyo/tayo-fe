@@ -7,6 +7,10 @@
     background-color:  white;
 }
 
+.section__header {
+    margin-bottom: 5%;
+}
+
 .section__container--dark {
     background-color: #192024;
     color: #fff;
@@ -38,7 +42,6 @@
 
 }
 
-
 @media screen and (max-width: 540px){
     .section__container {
         padding: 0;
@@ -57,3 +60,4 @@
     }
 
 }
+

@@ -1,20 +1,26 @@
-.card__container--light {
-    max-width: 390px;
-    max-height: 350px; 
+.card__container {
     padding: 15px;
 }
 
-.card__container--dark {
-    max-width: 800px;
-    max-height: 800px; 
-    padding: 30px;
+.card__container--sm {
+    max-width: 390px;
+}
+
+.card__container--md{
+    max-width: 600px;
+
+
+}
+.card__container--lg {
+    width: 100%;
 }
 
 .card__image {
     object-fit: fill;
-
-    max-width: 430px;
-    max-height: 287px;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 350px;
 }
 
 .fa-users-line {
@@ -28,6 +34,10 @@ transform: scale(3);
 
 .card__body {
     margin-top: 30px;
+    text-align: left;
+}
+
+.card__title{
     text-align: center;
 }
 

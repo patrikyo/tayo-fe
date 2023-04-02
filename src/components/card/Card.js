@@ -5,10 +5,12 @@ import { faUsersLine } from "@fortawesome/free-solid-svg-icons";
 const Card = (props) => {
   return (
     <div
-      className={`${
-        props.theme === "light"
-          ? "card__container--light"
-          : "card__container--dark"
+      className={`card__container ${
+        props.size === "small"
+          ? "card__container--sm"
+          : props.size === "medium"
+          ? "card__container--md"
+          : "card__container--lg"
       }`}
     >
       {props.icon.length > 0 && (
@@ -24,7 +26,7 @@ const Card = (props) => {
         <p className="card__text">{props.description}</p>
         {props.showButton && (
           <a
-            href="www.google.se"
+            href={`#${props.sectionId}`}
             className={`card__button ${
               props.theme === "light" ? "btn btn-primary" : "card__button--dark"
             }  `}

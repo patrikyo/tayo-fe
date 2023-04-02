@@ -1,20 +1,21 @@
 import Card from "../card/Card";
 import "./Section.css";
 const Section = (props) => {
+  console.info(props);
   return (
     <div
       className={`section__container section__container--${props.section.theme}`}
     >
       <div className="container">
         <div
-          className={`${
+          className={`section__header ${
             props.section.theme === "light"
               ? "section__header--light"
               : "section__header--dark"
           }`}
         >
           {props.section.headingLevel === 2 ? (
-            <h2>{props.section.header}</h2>
+            <h2 id={props.section.sectionId}>{props.section.header}</h2>
           ) : (
             <h3>{props.section.header}</h3>
           )}
@@ -34,6 +35,8 @@ const Section = (props) => {
                 theme={props.section.theme}
                 showButton={card.button}
                 icon={card.icon}
+                sectionId={card.sectionId}
+                size={card.size}
               />
             </li>
           ))}
