@@ -97,28 +97,19 @@ function App() {
   );
 
   const maintenanceSection = new SectionClass(
-    "Felsökning & reperation",
+    "Underhåll och uppföljning",
     2,
     "",
     "dark",
     [
       new cardClass(
-        "https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1acb41b9310a_city-scape.jpg",
-        "Reparation",
-        "body",
+        "https://www.romaniajournal.ro/wp-content/uploads/2021/09/writing-report.jpg",
+        "",
+        "Underhåll och uppföljning är avgörande för att säkerställa att ditt hisssystem fungerar optimalt och förhindra potentiella driftstopp. Vi erbjuder skräddarsydda underhållstjänster som är utformade för att passa dina specifika behov och budget. Vårt underhållsprogram är utformat för att upprätthålla säkerheten och funktionaliteten hos ditt hisssystem genom regelbundna inspektioner och reparationer. Vi använder oss av de senaste verktygen och teknikerna för att säkerställa att ditt hisssystem hålls i gott skick och att eventuella problem upptäcks och åtgärdas i tid. Vi förstår också att varje hisssystem är unikt och därför erbjuder vi skräddarsydda underhållsplaner som är anpassade efter dina specifika behov. Vi kommer att utvärdera ditt hisssystem och ta hänsyn till faktorer som antal användare, användningsområde och ålder på utrustningen när vi utformar en plan som passar dina behov. Vi erbjuder också regelbunden uppföljning för att säkerställa att ditt hisssystem fortsätter att fungera optimalt. Vårt team kommer att kontakta dig regelbundet för att planera underhållsbesök och diskutera eventuella problem som du kan ha upptäckt. Vi kommer också att ge dig råd om de bästa lösningarna för att förbättra säkerheten och funktionaliteten hos ditt hisssystem. Kontakta oss idag för att boka en underhållstjänst eller för att lära dig mer om hur vi kan hjälpa dig att upprätthålla säkerheten och funktionaliteten hos ditt hisssystem på lång sikt. ",
         false,
         "",
         "randId",
-        "medium"
-      ),
-      new cardClass(
-        "https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1ab359b9312c_photo-1416400639808-f41f0c149b09.jpg",
-        "Felsökning",
-        "body",
-        false,
-        "",
-        "randId",
-        "medium"
+        "large"
       ),
     ],
     "maintenance"
