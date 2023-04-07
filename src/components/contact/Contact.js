@@ -38,7 +38,7 @@ const Contact = function () {
   };
 
   return (
-    <div className="contact__container">
+    <div className="contact">
       <h1 className="contact__header">Kontakta oss</h1>
       <p className="contact__body">
         Fyll i formuläret nedan så hör vi av oss så fort som möjligt!

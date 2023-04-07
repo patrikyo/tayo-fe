@@ -1,4 +1,4 @@
-.contact__container {
+.contact {
     width: 940px;
     margin: 0 auto;
     text-align: center;
@@ -77,8 +77,8 @@
 }
 
 @media screen and (max-width: 540px){
-    .contact__container {
+    .contact {
         width: 100%;
-        padding: 10px 15px;
+        padding: 15% 15px;
     }
 }

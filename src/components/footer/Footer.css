@@ -1,4 +1,4 @@
-.footer__container {
+.footer {
     display: flex;
     justify-content: space-between;
     padding: 35px 0;
@@ -56,10 +56,10 @@
 
 
 @media screen and (max-width: 540px) {
-    .footer__container {
+    .footer {
         flex-direction: column; 
         gap: 30px;
-        padding: 35px 15px;
+        padding: 0 15px;
     }
 
     .footer__socialmedia {
