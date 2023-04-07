@@ -1,9 +1,14 @@
 .card__container {
     padding: 15px;
+
 }
 
 .card__container--sm {
     max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 300px;
 }
 
 .card__container--md{
@@ -45,17 +50,10 @@ transform: scale(3);
     width: 100%;
 }
 
-a.card__button--light {
-    background-color: #676776 ;
-    color: white ;   
+.card__button--light {
+    background-color: #676776 !important;
+    color: white !important;   
 }
-
-a.card__button--light:hover {
-    background-color: #676776 ;
-    color: white;
-     opacity: 0.9;
-}
-
 
 .card__button--dark{
     background-color: #192024 ;
@@ -74,6 +72,10 @@ a.card__button--light:hover {
 
 
 @media screen and (max-width: 540px){
+    .card__container {
+        padding: 15px 0;
+    
+    }
     .card__container--light {
         padding: 0 0 2.5em 0;
     }

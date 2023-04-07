@@ -29,7 +29,7 @@ const Card = (props) => {
             href={`#${props.sectionId}`}
             className={`card__button ${
               props.theme === "light"
-                ? "btn  card__button--light"
+                ? "btn card__button--light"
                 : "card__button--dark"
             }  `}
           >
