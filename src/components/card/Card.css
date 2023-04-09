@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    min-height: 300px;
+    min-height: 330px;
 }
 
 .card__container--md{
@@ -26,11 +26,6 @@
     height: 100%;
     max-width: 800px;
     max-height: 350px;
-}
-
-.fa-users-line {
-transform: scale(3);
-
 }
 
 .card__icon-container {
@@ -86,5 +81,9 @@ transform: scale(3);
 
     .card__image {
         max-width: 300px;
+    }
+
+    .card__container--sm {
+        justify-content: center;
     }
 }
