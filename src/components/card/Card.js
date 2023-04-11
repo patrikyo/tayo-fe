@@ -11,7 +11,7 @@ const Card = (props) => {
   const [icon, setIcon] = useState(null);
   useEffect(() => {
     choseIcon();
-  }, []);
+  }, [icon]);
 
   const choseIcon = () => {
     switch (props.icon) {

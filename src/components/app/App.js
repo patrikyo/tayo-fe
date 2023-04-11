@@ -32,7 +32,7 @@ function App() {
         "Felsökning & reperation",
         "Med en erfaren och certifierade tekniker har vi expertisen att diagnostisera och reparera alla typer av hiss- och rulltrappsystem, från hydrauliska till drag- och maskinrumslösa system.",
         true,
-        "faUsersLine",
+        "faWrench",
         "reperation",
         "small"
       ),
@@ -41,7 +41,7 @@ function App() {
         "Underhåll och uppföljning",
         "För att förebygga framtida problem kan hisskonsulten rekommendera en underhållsplan för kundens hiss- eller rulltrappssystem.",
         true,
-        "faUsersLine",
+        "faNoteSticky",
         "maintenance",
         "small"
       ),
