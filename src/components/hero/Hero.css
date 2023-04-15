@@ -24,6 +24,7 @@
 .hero__header {
     color: white;
     font-size: 60px;
+    text-align: center;
 }
 
 .hero__text {
