@@ -55,7 +55,7 @@
 }
 
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 720px) {
     .footer {
         flex-direction: column; 
         gap: 30px;
