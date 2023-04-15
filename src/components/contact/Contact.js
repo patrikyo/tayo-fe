@@ -2,13 +2,14 @@ import { useState } from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 const Contact = function () {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(false);
+  const [sent, setSent] = useState(null);
 
   const sendMessage = (e) => {
     setLoading(true);
@@ -22,18 +23,17 @@ const Contact = function () {
       body: JSON.stringify(contactForm),
     })
       .then((res) => {
+        setLoading(false);
+
         if (res.status === 200) {
-          console.info(res, "Framgånsrikt");
-          setLoading(false);
           setSent(true);
         } else {
-          console.info("misslyckades");
-          setLoading(false);
+          setSent(false);
         }
       })
       .catch((err) => {
-        console.info("misslyckades");
         setLoading(false);
+        setSent(false);
       });
   };
 
@@ -77,18 +77,38 @@ const Contact = function () {
 
           {sent && (
             <div className="contact__verification">
-              <FontAwesomeIcon
-                className="contact__check-icon"
-                icon={faCheckCircle}
-              />
-              <p class="mt-3 text-center">
+              <div className="contact__verification-icon-container">
+                <FontAwesomeIcon
+                  className="contact__check-icon"
+                  icon={faCheckCircle}
+                />
+              </div>
+
+              <p className="mt-3 text-center">
                 Tack för kontaktuppgifterna, vi återkommer så snabbt vi kan
               </p>
             </div>
           )}
+
+          {sent === false && (
+            <div className="contact__verification">
+              <div className="contact__verification-icon-container">
+                <FontAwesomeIcon
+                  className="contact__failed-icon"
+                  icon={faCircleExclamation}
+                />
+              </div>
+
+              <p className="mt-3 text-center">
+                Teknisk fel uppstod, försök gärna att skicka kontaktuppgifterna
+                igen{" "}
+              </p>
+            </div>
+          )}
+
           {loading && (
             <div className="contact__spinner-container">
-              <div class=" spinner-border text-primary" role="status"></div>
+              <div className=" spinner-border text-primary" role="status"></div>
             </div>
           )}
         </fieldset>
