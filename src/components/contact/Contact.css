@@ -6,14 +6,14 @@
 
 .contact__header {
     color: #676770;
-    font-size: 30px;
+    font-size: 1.875rem;
     letter-spacing: 5px;
     font-weight: 300;
 }
 
 .contact__body {
     color: #8e8e9c;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 300;
     text-align: center;
     letter-spacing: 3px;
@@ -28,7 +28,7 @@
 
 .contact_fieldset > label {
     margin: 10px 0;
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 25px;
     font-weight: 300;
 }

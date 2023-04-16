@@ -17,8 +17,8 @@
 }
 
 .section__header--light {
-    font-size: 30px;
-    color: #676770
+    font-size: 1.875rem !important;
+    color: #676770;
 }
 
 .section__header--dark { 
@@ -27,7 +27,7 @@
 
 .section__body {
     color: #8e8e9c;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 50%;
     margin: 0 auto 60px auto;
 }
