@@ -47,6 +47,10 @@
     background-color: #69C3FF;
 }
 
+.contact__submit:active {
+    opacity: 0.5
+}
+
 .contact__control {
     padding: 10px; 
     border: 1px solid black;

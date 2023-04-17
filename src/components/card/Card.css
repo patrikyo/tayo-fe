@@ -50,6 +50,10 @@
     color: white !important;   
 }
 
+.card__button--light:active {
+    opacity: 0.5;
+}
+
 .card__button--dark{
     background-color: #192024 ;
     border: 1px solid #fff ;
@@ -58,6 +62,10 @@
     border-radius: 0; 
     padding: 10px 30px;
     display: inline-block;
+}
+
+.card__button--dark:active{
+opacity: 0.5;
 }
 
 .card__button--dark:hover{
