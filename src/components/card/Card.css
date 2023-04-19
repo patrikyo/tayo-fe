@@ -50,7 +50,11 @@
     color: white !important;   
 }
 
-.card__button--light:active {
+.card__button--light:hover {
+    opacity: 0.5;
+}
+
+.card__button:active {
     opacity: 0.5;
 }
 
@@ -64,9 +68,6 @@
     display: inline-block;
 }
 
-.card__button--dark:active{
-opacity: 0.5;
-}
 
 .card__button--dark:hover{
     border: 1px solid #2e9dff;
