@@ -6,38 +6,33 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
 function Header() {
-  const [navigation, setNavigation] = useState(false);
+  const [nav, setNav] = useState(false);
 
   return (
-    <div
-      className={`header  ${
-        navigation === true ? "header--navigation" : "header--no-navigation"
-      }`}
-    >
-      {/** title */}
+    <div className={`header`}>
+      {/** title starts*/}
       <Link id="header__home-link" to="/">
         <div className="header__title-container">
           <h1>Tayo</h1>
-          <FontAwesomeIcon className="header__icon" icon={faElevator} />
+          <FontAwesomeIcon className="header__title-icon" icon={faElevator} />
         </div>
       </Link>
+      {/** title ends*/}
 
-      {/** navigation links */}
-      <div className="header__navigation-container">
-        {/** Btn only visible up to 540px */}
-        <button
-          className="header__navigation-btn"
-          onClick={() => setNavigation(!navigation)}
-        >
+      {/** navigation links start */}
+      <div className="header__nav-container">
+        {/** Btn only visible up to 540px  starts */}
+        <button className="header__nav-toggle" onClick={() => setNav(!nav)}>
           <FontAwesomeIcon id="header__bars-icon" icon={faBars} />
         </button>
+        {/** Btn only visible up to 540px  ends */}
 
         <nav>
           <ul
-            className={`header__navigation-links  ${
-              navigation === true
-                ? "header__navigation-links--visible"
-                : "header__navigation-links--hide"
+            className={`header__nav-list  ${
+              nav === true
+                ? "header__nav-list--visible"
+                : "header__nav-list--hide"
             }`}
           >
             <li>{<NavLink to="/">Hem</NavLink>}</li>
@@ -45,6 +40,7 @@ function Header() {
           </ul>
         </nav>
       </div>
+      {/** navigation links ends */}
     </div>
   );
 }
