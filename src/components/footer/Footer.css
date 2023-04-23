@@ -4,14 +4,15 @@
     padding: 35px 0;
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
+
 }
 
-.footer__aboutUs {
-    text-align: center;
+.footer__about-container {
     max-width: 600px;
 }
 
-.footer__socialmedia {
+.footer__socialmedia-container {
     max-width: 600px;
 }
 
@@ -28,12 +29,12 @@
     font-weight: 300;
 }
 
-.footer__socialLink {
+.footer__link {
     text-decoration: none;
     color: #000; 
 }
 
-.footer__socialLink:hover {
+.footer__link:hover {
     color: #668cad;
 }
 
@@ -43,7 +44,7 @@
     margin: 0;
 }
 
-.footer_socialImage {
+.footer_image {
     margin-right: 5px;
 }
 

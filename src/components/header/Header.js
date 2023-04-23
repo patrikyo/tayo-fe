@@ -14,7 +14,7 @@ function Header() {
       <Link id="header__home-link" to="/">
         <div className="header__title-container">
           <h1>Tayo</h1>
-          <FontAwesomeIcon className="header__title-icon" icon={faElevator} />
+          <FontAwesomeIcon className="header__icon--title" icon={faElevator} />
         </div>
       </Link>
       {/** title ends*/}
@@ -23,7 +23,7 @@ function Header() {
       <div className="header__nav-container">
         {/** Btn only visible up to 540px  starts */}
         <button className="header__nav-toggle" onClick={() => setNav(!nav)}>
-          <FontAwesomeIcon id="header__bars-icon" icon={faBars} />
+          <FontAwesomeIcon id="header__icon--bars" icon={faBars} />
         </button>
         {/** Btn only visible up to 540px  ends */}
 
