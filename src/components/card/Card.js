@@ -3,17 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faUsersLine } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
-import followUp from "../../assets/followUp.jpg";
-
 import { useEffect, useState } from "react";
 
 const Card = (props) => {
   const [icon, setIcon] = useState(null);
-  useEffect(() => {
-    choseIcon();
-  }, [icon]);
 
-  const choseIcon = () => {
+  useEffect(() => {
     switch (props.icon) {
       case "faWrench":
         setIcon(faWrench);
@@ -25,9 +20,10 @@ const Card = (props) => {
         setIcon(faNoteSticky);
         break;
       default:
-        return null;
+        setIcon(null);
     }
-  };
+  }, []);
+
   return (
     <div
       className={`card__container ${
@@ -38,7 +34,7 @@ const Card = (props) => {
           : "card__container--lg"
       }`}
     >
-      {props.icon.length > 0 && (
+      {props.icon && icon && (
         <div className="card__icon-container">
           <FontAwesomeIcon icon={icon} size="3x" style={{ color: "#676776" }} />
         </div>
