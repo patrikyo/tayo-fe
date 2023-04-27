@@ -117,7 +117,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/** put everything between browser router in app component */}
       <Routes>
         <Route
           path="/"
@@ -128,14 +127,11 @@ function App() {
               <Section section={serviceSection} />
               <Section section={reperationSection} />
               <Section section={maintenanceSection} />
-              <div className="footer_wrapper">
-                <Footer />
-              </div>
+              <Footer />
             </>
           }
         />
-      </Routes>
-      <Routes>
+
         <Route
           path="/contact"
           element={
