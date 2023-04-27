@@ -1,11 +1,8 @@
 import Card from "../card/Card";
 import "./Section.css";
 const Section = (props) => {
-  console.info(props);
   return (
-    <div
-      className={`section__container section__container--${props.section.theme}`}
-    >
+    <div className={`section section--${props.section.theme}`}>
       <div className="container">
         <div
           className={`section__header ${

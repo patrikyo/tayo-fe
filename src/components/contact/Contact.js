@@ -44,7 +44,7 @@ const Contact = function () {
         Fyll i formuläret nedan så hör vi av oss så fort som möjligt!
       </p>
       <form className="contact__form" onSubmit={sendMessage}>
-        <fieldset className="contact_fieldset">
+        <fieldset className="contact__fieldset">
           <legend></legend>
           <label htmlFor="name">Namn</label>
           <input
@@ -72,34 +72,38 @@ const Contact = function () {
           ></textarea>
 
           {!loading && !sent && (
-            <input className="contact__submit" type="submit" value="Skicka" />
+            <input
+              className="contact__fieldset-submit"
+              type="submit"
+              value="Skicka"
+            />
           )}
 
           {sent && (
-            <div className="contact__verification">
-              <div className="contact__verification-icon-container">
+            <div className="contact__fieldset-verification-flex-wrapper">
+              <div className="contact__fieldset-verification-icon-container">
                 <FontAwesomeIcon
-                  className="contact__check-icon"
+                  className="contact__fieldset-icon--check"
                   icon={faCheckCircle}
                 />
               </div>
 
-              <p className="mt-3 text-center">
+              <p className="contact__fieldset-verification-desc">
                 Tack för kontaktuppgifterna, vi återkommer så snabbt vi kan
               </p>
             </div>
           )}
 
           {sent === false && (
-            <div className="contact__verification">
-              <div className="contact__verification-icon-container">
+            <div className="contact__fieldset-verification-flex-wrapper">
+              <div className="contact__fieldset-verification-icon-container">
                 <FontAwesomeIcon
-                  className="contact__failed-icon"
+                  className="contact__fieldset-icon--failed"
                   icon={faCircleExclamation}
                 />
               </div>
 
-              <p className="mt-3 text-center">
+              <p className="contact__fieldset-verification-desc">
                 Teknisk fel uppstod, försök gärna att skicka kontaktuppgifterna
                 igen{" "}
               </p>
@@ -107,8 +111,8 @@ const Contact = function () {
           )}
 
           {loading && (
-            <div className="contact__spinner-container">
-              <div className=" spinner-border text-primary" role="status"></div>
+            <div className="contact__fieldset-spinner-container">
+              <div className="spinner-border text-primary" role="status"></div>
             </div>
           )}
         </fieldset>

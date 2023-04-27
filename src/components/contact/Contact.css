@@ -20,20 +20,20 @@
     margin-bottom: 0;
 }
 
-.contact_fieldset {
+.contact__fieldset {
     text-align: left;
     display: flex;
     flex-direction: column;
 }
 
-.contact_fieldset > label {
+.contact__fieldset > label {
     margin: 10px 0;
     font-size: 0.875rem;
     line-height: 25px;
     font-weight: 300;
 }
 
-.contact__submit {
+.contact__fieldset-submit {
     font-weight: 300;
     margin-top: 20px;
     background-color: #69b9ff;
@@ -42,12 +42,12 @@
     border: none;
 }
 
-.contact__submit:hover {
+.contact__fieldset-submit:hover {
     cursor: pointer;
     background-color: #69C3FF;
 }
 
-.contact__submit:active {
+.contact__fieldset-submit:active {
     opacity: 0.5
 }
 
@@ -57,7 +57,7 @@
    /*  border: 1px  #69C3FF; */
 }
 
-.contact__spinner-container {
+.contact__fieldset-spinner-container {
     width: 85px;
     margin: 20px auto 0;
     text-align: center;
@@ -68,27 +68,32 @@
     color: #69b9ff !important;
 }
 
-.contact__verification {
+.contact__fieldset-verification-flex-wrapper {
     margin: 25px;
     display: flex;
     justify-content: center;
     gap: 10px;
 }
 
-.contact__verification-icon-container {
+.contact__fieldset-verification-icon-container {
     margin: auto 0;
 }
 
-.contact__check-icon {
+.contact__fieldset-icon--check {
     height: 40px;
     width: 40px;
     color: green;
 }
 
-.contact__failed-icon {
+.contact__fieldset-icon--failed {
     height: 40px;
     width: 40px;
     color: red;
+}
+
+.contact__fieldset-verification-desc {
+    text-align: center;
+    margin-top: 15px;
 }
 
 @media screen and (max-width: 1000px){
