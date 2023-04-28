@@ -1,5 +1,5 @@
 import Card from "../card/Card";
-import "./Section.css";
+import "./Section.scss";
 const Section = (props) => {
   return (
     <div className={`section section--${props.section.theme}`}>

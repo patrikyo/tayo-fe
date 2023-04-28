@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Contact.css";
+import "./Contact.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
