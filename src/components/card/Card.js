@@ -1,4 +1,4 @@
-import "./Card.css";
+import "./Card.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWrench } from "@fortawesome/free-solid-svg-icons";
 import { faUsersLine } from "@fortawesome/free-solid-svg-icons";

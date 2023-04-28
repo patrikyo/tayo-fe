@@ -1,4 +1,4 @@
-import "./Footer.css";
+import "./Footer.scss";
 const Footer = function () {
   return (
     <div className="footer">
