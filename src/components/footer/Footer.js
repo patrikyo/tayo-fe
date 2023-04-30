@@ -15,14 +15,14 @@ const Footer = function () {
         <h2 className="footer__header">Sociala medier</h2>
 
         <div className="footer__body">
-          <ul className="footer_list">
+          <ul className="footer__list">
             <li>
               <a className="footer__link" href="www.facebook.com">
                 <img
                   src="https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1a3b71b93135_social-18.svg"
                   width="20"
                   alt=""
-                  className="footer_image"
+                  className="footer__image"
                 />
                 <span>Facebook</span>
               </a>
@@ -33,7 +33,7 @@ const Footer = function () {
                   src="https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1a19f9b93130_social-06.svg"
                   width="20"
                   alt=""
-                  className="footer_image"
+                  className="footer__image"
                 />
                 <span>google</span>
               </a>
