@@ -1,3 +1,6 @@
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
 .card {
   &__container {
     padding: 15px;
@@ -45,8 +48,8 @@
   }
 
   &__button--light {
-    background-color: #676776 !important;
-    color: white !important;
+    background-color: $color-grey-4 !important;
+    color: $color-white-1 !important;
   }
 
   &__button--light:hover {
@@ -58,9 +61,9 @@
   }
 
   &__button--dark {
-    background-color: #192024;
-    border: 1px solid #fff;
-    color: #fff;
+    background-color: $color-blue-7;
+    border: 1px solid $color-white-1;
+    color: $color-white-1;
     text-decoration: none;
     border-radius: 0;
     padding: 10px 30px;
@@ -68,12 +71,11 @@
   }
 
   &__button--dark:hover {
-    border: 1px solid #2e9dff;
-    color: #2e9dff;
+    border: 1px solid $color-cyan-5;
+    color: $color-cyan-5;
   }
 }
-
-@media screen and (max-width: 540px) {
+@include mobile(540px) {
   .card {
     &__container {
       padding: 15px 0;

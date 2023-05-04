@@ -1,3 +1,6 @@
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
 .header {
   max-width: 940px;
   display: flex;
@@ -12,12 +15,12 @@
   }
 
   &__icon--title {
-    color: #676776;
+    color: $color-grey-4;
     transform: scale(3);
   }
 
   h1 {
-    color: #676776;
+    color: $color-grey-4;
     padding-top: 10px;
     font-size: 4em;
   }
@@ -58,11 +61,11 @@
   &__nav-list {
     a {
       text-align: center;
-      color: #676770;
+      color: $color-grey-3;
       display: block;
       text-decoration: none;
       padding: 10px;
-      font-size: 1rem;
+      font-size: $font-size-sm-rem;
     }
   }
 
@@ -78,10 +81,10 @@
 #header__icon--bars {
   width: 35px;
   height: 35px;
-  color: #192024;
+  color: $color-blue-7;
 }
 
-@media screen and (max-width: 540px) {
+@include mobile(540px) {
   .header {
     padding: 20px 10px;
 

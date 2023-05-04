@@ -1,9 +1,12 @@
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
 .section {
   text-align: center;
   padding: 80px 0;
 
   &--light {
-    background-color: white;
+    background-color: $color-white-1;
   }
 
   &__header {
@@ -11,22 +14,22 @@
   }
 
   &--dark {
-    background-color: #192024;
-    color: #fff;
+    background-color: $color-blue-7;
+    color: $color-white-1;
   }
 
   &__header--light {
-    font-size: 1.875rem !important;
-    color: #676770;
+    font-size: $font-size-lg-rem !important;
+    color: $color-grey-3;
   }
 
   &__header--dark {
-    color: #fff;
+    color: $color-white-1;
   }
 
   &__body {
-    color: #8e8e9c;
-    font-size: 1.125rem;
+    color: $color-grey-2;
+    font-size: $font-size-md-rem;
     width: 50%;
     margin: 0 auto 60px auto;
   }
@@ -41,7 +44,7 @@
   }
 }
 
-@media screen and (max-width: 540px) {
+@include mobile(540px) {
   .section {
     padding: 0;
 

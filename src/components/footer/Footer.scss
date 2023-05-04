@@ -1,3 +1,6 @@
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
 .footer {
   display: flex;
   justify-content: space-between;
@@ -16,20 +19,20 @@
 
   &__header {
     margin-bottom: 20px;
-    font-size: 1.125rem;
+    font-size: $font-size-md-rem;
     font-weight: 300;
-    color: #676770;
+    color: $color-grey-3;
   }
 
   &__body {
-    font-size: 0.875rem;
+    font-size: $font-size-xs-rem;
     line-height: 25px;
     font-weight: 300;
   }
 
   &__link {
     text-decoration: none;
-    color: #000;
+    color: $color-black-1;
   }
 
   &__link:hover {
@@ -48,13 +51,12 @@
 
   &__list > li {
     padding-bottom: 15px;
-    font-size: 0.875rem;
+    font-size: $font-size-xs-rem;
     font-weight: 400;
-    border-bottom: 1px solid #d5d5e0;
+    border-bottom: 1px solid $color-grey-1;
   }
 }
-
-@media screen and (max-width: 720px) {
+@include mobile(720px) {
   .footer {
     flex-direction: column;
     gap: 30px;
