@@ -13,7 +13,7 @@ import { useEffect } from "react";
 function App() {
 
   useEffect(()=>{
-    fetch("http://localhost:9000/ping");
+    fetch("https://tayo-api-service.onrender.com/api/ping");
   }, []);
 
   const servicesSection: SectionClass = new SectionClass(
