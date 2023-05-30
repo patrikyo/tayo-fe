@@ -8,8 +8,13 @@ import SectionClass from "../../models/section";
 import cardClass from "../../models/card";
 import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
+import { useEffect } from "react";
 
 function App() {
+
+  useEffect(()=>{
+    fetch("http://localhost:9000/ping");
+  }, []);
 
   const servicesSection: SectionClass = new SectionClass(
     "Våra tjänster",
