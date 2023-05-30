@@ -1,35 +1,39 @@
 import Card from "../card/Card";
+import SectionClass from "../../models/section"
+import CardClass from "../../models/card"
+
 import "./Section.scss";
-const Section = (props) => {
+const Section = ({section}: {section: SectionClass}): JSX.Element => {
+
   return (
-    <div className={`section section--${props.section.theme}`}>
+    <div className={`section section--${section.theme}`}>
       <div className="container">
         <div
           className={`section__header ${
-            props.section.theme === "light"
+            section.theme === "light"
               ? "section__header--light"
               : "section__header--dark"
           }`}
         >
-          {props.section.headingLevel === 2 ? (
-            <h2 id={props.section.sectionId}>{props.section.header}</h2>
+          {section.headingLevel === 2 ? (
+            <h2 id={section.sectionId}>{section.header}</h2>
           ) : (
-            <h3>{props.section.header}</h3>
+            <h3>{section.header}</h3>
           )}
         </div>
-        {props.section.body.length > 0 && (
+        {section.body.length > 0 && (
           <div className="section__body">
-            <p>{props.section.body} </p>
+            <p>{section.body} </p>
           </div>
         )}
         <ul className="section__list">
-          {props.section.cards?.map((card, index) => (
+          {section.cards?.map((card: CardClass, index: number) => (
             <li key={index}>
               <Card
                 imgUrl={card.img}
                 title={card.title}
                 description={card.body}
-                theme={props.section.theme}
+                theme={section.theme}
                 showButton={card.button}
                 icon={card.icon}
                 sectionId={card.sectionId}

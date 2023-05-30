@@ -5,8 +5,8 @@ import { faElevator } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
-function Header() {
-  const [nav, setNav] = useState(false);
+function Header(): JSX.Element {
+  const [nav, setNav]:  [boolean, Function] = useState<boolean>(false);
 
   return (
     <div className={`header`}>

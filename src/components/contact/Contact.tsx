@@ -1,20 +1,21 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./Contact.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { ContactForm } from "../../models/contactForm";
 
-const Contact = function () {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [sent, setSent] = useState(null);
+const Contact = function (): JSX.Element {
+  const [name, setName]: [string, Function] = useState<string>("");
+  const [email, setEmail]: [string, Function] = useState<string>("");
+  const [message, setMessage]: [string, Function] = useState<string>("");
+  const [loading, setLoading]: [boolean, Function] = useState<boolean>(false);
+  const [sent, setSent]: [(null | boolean), Function] = useState<null>(null);
 
-  const sendMessage = (e) => {
+  const sendMessage = (e: FormEvent<HTMLFormElement> ): void => {
     setLoading(true);
     e.preventDefault();
-    const contactForm = { name, email, message };
+    const contactForm: ContactForm = { name, email, message };
     fetch("https://tayo-api-service.onrender.com/api/contact", {
       method: "POST",
       headers: {
@@ -22,7 +23,7 @@ const Contact = function () {
       },
       body: JSON.stringify(contactForm),
     })
-      .then((res) => {
+      .then((res: Response) => {
         setLoading(false);
 
         if (res.status === 200) {
@@ -31,7 +32,7 @@ const Contact = function () {
           setSent(false);
         }
       })
-      .catch((err) => {
+      .catch((err: Error) => {
         setLoading(false);
         setSent(false);
       });
@@ -122,3 +123,4 @@ const Contact = function () {
 };
 
 export default Contact;
+

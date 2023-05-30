@@ -1,98 +1,100 @@
-.card__container {
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
+.card {
+  &__container {
     padding: 15px;
+  }
 
-}
-
-.card__container--sm {
+  &__container--sm {
     max-width: 390px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     min-height: 330px;
-}
+  }
 
-.card__container--md{
+  &__container--md {
     max-width: 600px;
+  }
 
-
-}
-.card__container--lg {
+  &__container--lg {
     width: 100%;
-}
+  }
 
-.card__image {
+  &__image {
     object-fit: fill;
     width: 100%;
     height: 100%;
     max-width: 800px;
     max-height: 350px;
-}
+  }
 
-.card__icon-container {
+  &__icon-container {
     margin: 0 auto;
-}
+  }
 
-.card__body {
+  &__body {
     margin-top: 30px;
     text-align: left;
-}
+  }
 
-.card__title{
+  &__title {
     text-align: center;
-}
+  }
 
-.card__button {
+  &__button {
     width: 100%;
-}
+  }
 
-.card__button--light {
-    background-color: #676776 !important;
-    color: white !important;   
-}
+  &__button--light {
+    background-color: $color-grey-4 !important;
+    color: $color-white-1 !important;
+  }
 
-.card__button--light:hover {
+  &__button--light:hover {
     opacity: 0.5;
-}
+  }
 
-.card__button:active {
+  &__button:active {
     opacity: 0.5;
-}
+  }
 
-.card__button--dark{
-    background-color: #192024 ;
-    border: 1px solid #fff ;
-    color: #fff;
+  &__button--dark {
+    background-color: $color-blue-7;
+    border: 1px solid $color-white-1;
+    color: $color-white-1;
     text-decoration: none;
-    border-radius: 0; 
+    border-radius: 0;
     padding: 10px 30px;
     display: inline-block;
+  }
+
+  &__button--dark:hover {
+    border: 1px solid $color-cyan-5;
+    color: $color-cyan-5;
+  }
 }
-
-
-.card__button--dark:hover{
-    border: 1px solid #2e9dff;
-    color: #2e9dff;
-}
-
-
-@media screen and (max-width: 540px){
-    .card__container {
-        padding: 15px 0;
-    
-    }
-    .card__container--light {
-        padding: 0 0 2.5em 0;
-    }
-    
-    .card__container--dark {
-        padding: 0 0 2.5em 0;
+@include mobile(540px) {
+  .card {
+    &__container {
+      padding: 15px 0;
     }
 
-    .card__image {
-        max-width: 400px;
+    &__container--light {
+      padding: 0 0 2.5em 0;
     }
 
-    .card__container--sm {
-        justify-content: center;
+    &__container--dark {
+      padding: 0 0 2.5em 0;
     }
+
+    &__image {
+      max-width: 400px;
+    }
+
+    &__container--sm {
+      justify-content: center;
+    }
+  }
 }

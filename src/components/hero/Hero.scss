@@ -1,29 +1,31 @@
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
+
 .hero {
-    height: 50rem;
-    max-height: 600px;
-    object-fit: contain;
-    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.9)), url('../../assets/elevatorHero.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  height: $font-size-xxxlg-rem;
+  max-height: 600px;
+  object-fit: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+    url("../../assets/elevatorHero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-}
-
-.hero__header {
-    color: white;
-    font-size: 4rem; 
+  &__header {
+    color: $color-white-1;
+    font-size: $font-size-xxlg-rem;
     text-align: center;
+  }
 }
 
-@media screen and (max-width: 540px){
-    .hero__header {
-        font-size: 2.5rem;
+@include mobile(540px) {
+  .hero {
+    &__header {
+      font-size: $font-size-xlg-rem;
     }
+  }
 }
-
-
-

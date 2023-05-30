@@ -5,8 +5,9 @@ import { faUsersLine } from "@fortawesome/free-solid-svg-icons";
 import { faNoteSticky } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";
 
-const Card = (props) => {
-  const [icon, setIcon] = useState(null);
+
+const Card = (props:  {imgUrl: string, title: string,  description: string, theme: string, showButton: boolean, icon: string,  sectionId: string, size: string }) => {
+  const [icon, setIcon]: [(null | string), Function] = useState<null>(null);
 
   useEffect(() => {
     switch (props.icon) {

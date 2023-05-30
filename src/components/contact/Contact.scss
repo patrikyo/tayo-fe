@@ -1,105 +1,107 @@
-.contact {
-    width: 940px;
-    margin: 0 auto;
-    text-align: center;
-}
+@import "../../assets/styles/varibles.scss";
+@import "../../assets/styles/util.scss";
 
-.contact__header {
-    color: #676770;
-    font-size: 1.875rem;
+.contact {
+  width: 940px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__header {
+    color: $color-grey-3;
+    font-size: $font-size-lg-rem;
     letter-spacing: 5px;
     font-weight: 300;
-}
+  }
 
-.contact__body {
-    color: #8e8e9c;
-    font-size: 1.125rem;
+  &__body {
+    color: $color-grey-2;
+    font-size: $font-size-md-rem;
     font-weight: 300;
     text-align: center;
     letter-spacing: 3px;
     margin-bottom: 0;
-}
+  }
 
-.contact__fieldset {
+  &__fieldset {
     text-align: left;
     display: flex;
     flex-direction: column;
-}
+  }
 
-.contact__fieldset > label {
+  &__fieldset > label {
     margin: 10px 0;
-    font-size: 0.875rem;
+    font-size: $font-size-xs-rem;
     line-height: 25px;
     font-weight: 300;
-}
+  }
 
-.contact__fieldset-submit {
+  &__fieldset-submit {
     font-weight: 300;
     margin-top: 20px;
-    background-color: #69b9ff;
-    color: white;
+    background-color: $color-cyan-6;
+    color: $color-white-1;
     padding: 12px 30px;
     border: none;
-}
+  }
 
-.contact__fieldset-submit:hover {
+  &__fieldset-submit:hover {
     cursor: pointer;
-    background-color: #69C3FF;
-}
+    background-color: $color-cyan-1;
+  }
 
-.contact__fieldset-submit:active {
-    opacity: 0.5
-}
+  &__fieldset-submit:active {
+    opacity: 0.5;
+  }
 
-.contact__control {
-    padding: 10px; 
+  &__control {
+    padding: 10px;
     border: 1px solid black;
-   /*  border: 1px  #69C3FF; */
-}
+  }
 
-.contact__fieldset-spinner-container {
+  &__fieldset-spinner-container {
     width: 85px;
     margin: 20px auto 0;
     text-align: center;
-}
-.spinner-border {
-    height: 50px;
-    width: 50px;
-    color: #69b9ff !important;
-}
+  }
 
-.contact__fieldset-verification-flex-wrapper {
+  &__fieldset-verification-flex-wrapper {
     margin: 25px;
     display: flex;
     justify-content: center;
     gap: 10px;
-}
+  }
 
-.contact__fieldset-verification-icon-container {
+  &__fieldset-verification-icon-container {
     margin: auto 0;
-}
+  }
 
-.contact__fieldset-icon--check {
+  &__fieldset-icon--check {
     height: 40px;
     width: 40px;
     color: green;
-}
+  }
 
-.contact__fieldset-icon--failed {
+  &__fieldset-icon--failed {
     height: 40px;
     width: 40px;
     color: red;
-}
+  }
 
-.contact__fieldset-verification-desc {
+  &__fieldset-verification-desc {
     text-align: center;
     margin-top: 15px;
+  }
 }
 
-@media screen and (max-width: 1000px){
-    .contact {
-        width: 100%;
-        padding: 15px 15px 60px 15px;
-    }
+.spinner-border {
+  height: 50px;
+  width: 50px;
+  color: $color-cyan-6 !important;
 }
 
+@include mobile(1000px) {
+  .contact {
+    width: 100%;
+    padding: 15px 15px 60px 15px;
+  }
+}
