@@ -1,8 +1,6 @@
 import "./App.scss";
-import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import "../../index.css";
+ import "../../index.scss";
 import Header from "../header/Header";
 import Hero from "../hero/Hero";
 import Section from "../section/Section";
@@ -12,7 +10,8 @@ import Contact from "../contact/Contact";
 import Footer from "../footer/Footer";
 
 function App() {
-  const servicesSection = new SectionClass(
+
+  const servicesSection: SectionClass = new SectionClass(
     "Våra tjänster",
     2,
     "Med stor kunskap inom rulltrappor och hissar är vi heltäckande men i ett litet företag som kan ge personlig service. Det är viktigt för oss att vi har en nära kontakt med våra kunder.",
@@ -49,7 +48,8 @@ function App() {
     "tjänster"
   );
 
-  const serviceSection = new SectionClass(
+
+  const serviceSection: SectionClass = new SectionClass(
     "Service",
     2,
     "",
@@ -68,7 +68,7 @@ function App() {
     "service"
   );
 
-  const reperationSection = new SectionClass(
+  const reperationSection: SectionClass = new SectionClass(
     "Felsökning & reperation",
     2,
     "",
@@ -96,7 +96,7 @@ function App() {
     "reperation"
   );
 
-  const maintenanceSection = new SectionClass(
+  const maintenanceSection: SectionClass = new SectionClass(
     "Underhåll och uppföljning",
     2,
     "",

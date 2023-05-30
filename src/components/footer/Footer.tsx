@@ -1,5 +1,7 @@
 import "./Footer.scss";
-const Footer = function () {
+import React from 'react';
+
+const Footer = function (): JSX.Element {
   return (
     <div className="footer">
       <div className="footer__about-container">
