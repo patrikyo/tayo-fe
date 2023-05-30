@@ -21,7 +21,7 @@ const Footer = function (): JSX.Element {
             <li>
               <a className="footer__link" href="www.facebook.com">
                 <img
-                  src="https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1a3b71b93135_social-18.svg"
+                  src="https://assets.website-files.com/5e4b18feebfd1a721bb930e6/5e4b18feebfd1a0b47b9311e_social-03.svg"
                   width="20"
                   alt=""
                   className="footer__image"
