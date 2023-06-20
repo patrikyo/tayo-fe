@@ -1,21 +1,20 @@
-import { FormEvent, useState } from "react";
+import { FormEvent } from "react";
 import "./Contact.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { ContactForm } from "../../models/contactForm";
+import { useSelector, useDispatch } from 'react-redux';
+import { setName, setEmail, setMessage, setLoading, setSent } from "../../features/appSlice";
 
 const Contact = function (): JSX.Element {
-  const [name, setName]: [string, Function] = useState<string>("");
-  const [email, setEmail]: [string, Function] = useState<string>("");
-  const [message, setMessage]: [string, Function] = useState<string>("");
-  const [loading, setLoading]: [boolean, Function] = useState<boolean>(false);
-  const [sent, setSent]: [(null | boolean), Function] = useState<null>(null);
+  const app = useSelector((state: any)=> state);
+  const dispatch = useDispatch();
 
   const sendMessage = (e: FormEvent<HTMLFormElement> ): void => {
     setLoading(true);
     e.preventDefault();
-    const contactForm: ContactForm = { name, email, message };
+    const contactForm: ContactForm = {name: app.name , email: app.email, message: app.message };
     fetch("https://tayo-api-service.onrender.com/api/contact", {
       method: "POST",
       headers: {
@@ -24,7 +23,7 @@ const Contact = function (): JSX.Element {
       body: JSON.stringify(contactForm),
     })
       .then((res: Response) => {
-        setLoading(false);
+        dispatch(setLoading(false));
 
         if (res.status === 200) {
           setSent(true);
@@ -33,7 +32,7 @@ const Contact = function (): JSX.Element {
         }
       })
       .catch((err: Error) => {
-        setLoading(false);
+        dispatch(setLoading(false));
         setSent(false);
       });
   };
@@ -53,8 +52,8 @@ const Contact = function (): JSX.Element {
             className="contact__control"
             id="name"
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            value={app.name}
+            onChange={(e) => dispatch(setName(e.target.value))}
           />
           <label htmlFor="email">Email</label>
           <input
@@ -62,17 +61,17 @@ const Contact = function (): JSX.Element {
             className="contact__control"
             id="email"
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={app.email}
+            onChange={(e) => dispatch(setEmail(e.target.value))}
           />
           <label htmlFor="message">Meddelande</label>
           <textarea
             className="contact__control"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            value={app.message}
+            onChange={(e) => dispatch(setMessage(e.target.value))}
           ></textarea>
 
-          {!loading && !sent && (
+          {!app.loading && !app.sent && (
             <input
               className="contact__fieldset-submit"
               type="submit"
@@ -80,7 +79,7 @@ const Contact = function (): JSX.Element {
             />
           )}
 
-          {sent && (
+          {app.sent && (
             <div className="contact__fieldset-verification-flex-wrapper">
               <div className="contact__fieldset-verification-icon-container">
                 <FontAwesomeIcon
@@ -95,7 +94,7 @@ const Contact = function (): JSX.Element {
             </div>
           )}
 
-          {sent === false && (
+          {app.sent === false && (
             <div className="contact__fieldset-verification-flex-wrapper">
               <div className="contact__fieldset-verification-icon-container">
                 <FontAwesomeIcon
@@ -111,7 +110,7 @@ const Contact = function (): JSX.Element {
             </div>
           )}
 
-          {loading && (
+          {app.loading && (
             <div className="contact__fieldset-spinner-container">
               <div className="spinner-border text-primary" role="status"></div>
             </div>
